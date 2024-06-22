@@ -637,18 +637,16 @@ nav a:hover {
         display: flex;
         overflow: hidden;
     }
-    menu-toggle {
-        display: none; /* hide the button by default */
-      }
+   
     
       .menu-toggle:checked + nav ul {
-        transform: translateX(0); /* show the nav menu when button is clicked */
+        transform: translateX(0);
+          display:block;   /* shows the nav menu when button is clicked */
       }
 }
-/* Media Query for Very Small Phones */
 
 
-/* Ensure dark mode toggle button is visible */
+/* Ensures that the  dark mode toggle button is visible */
 #dark-mode-toggle-button {
     display: flex;
     align-items: center;
