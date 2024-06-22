@@ -620,23 +620,24 @@ nav a:hover {
     }
 
     nav ul {
-    display: none; /* hide the nav menu by default */
-    position: absolute;
-    top: 95px;
-    right: 0;
-    text-align: center;
-    transform: translateX(100%);
-  }
-    
+        display: flex; /* hide the nav menu by default */
+        position: absolute;
+        flex-direction: column-reverse;
+        top: 95px;
+        right: 0;
+        text-align: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
 
     nav li {
         margin: 0.5rem 0;
     }
-    
-      .menu-toggle:checked + nav ul {
+
+    .menu-toggle:checked + nav ul {
         transform: translateX(0);
-          display:block;   /* shows the nav menu when button is clicked */
-      }
+        display: flex; /* shows the nav menu when button is clicked */
+    }
 }
 
 
