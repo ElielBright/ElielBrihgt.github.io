@@ -632,11 +632,6 @@ nav a:hover {
     nav li {
         margin: 0.5rem 0;
     }
-    .menu-toggle {
-        display: flex;
-        overflow: hidden;
-    }
-   
     
       .menu-toggle:checked + nav ul {
         transform: translateX(0);
