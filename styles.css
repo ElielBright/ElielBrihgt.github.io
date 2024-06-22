@@ -620,14 +620,13 @@ nav a:hover {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 5px;
-        top: 95px;
-        right: 0;
-        text-align: center;
-        position: absolute;
-        transform: translateX(100%);
-    }
+    display: none; /* hide the nav menu by default */
+    position: absolute;
+    top: 95px;
+    right: 0;
+    text-align: center;
+    transform: translateX(100%);
+  }
     
 
     nav li {
