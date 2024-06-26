@@ -492,88 +492,111 @@ nav a:hover {
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        position: absolute;
-        top: 142px;
-        right: 0;
-        background-color: #2827285f;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.3s;
-        align-content: center;
-    }
-    nav ul li{
-        padding: 1rem;
-        margin-left: 10px;
-    }
-    nav ul.open {
-        transform: translateX(0);
-    }
-    .menu-toggle {
-        display: flex;
-    }
-}
-@media (max-width: 768px) {
-    .hero {
-        padding: 50px 5%; /* Adjust padding for smaller screens */
+/* Base Styles (Desktop) */
+/* These styles are already defined in your CSS */
+
+@media screen and (max-width: 1200px) {
+    .logo {
+        font-size: 40px;
+        margin-left: 50px;
+        margin-right: 10px;
     }
 
     .content {
-        flex-direction: column; /* Stack content vertically on small screens */
-        align-items: center; /* Center align content */
+        margin-left: 40px;
+        padding: 20px;
     }
 
-    .about {
-        margin-right: 0;
-        margin-bottom: 30px; /* Adjust spacing between sections */
+    .about h1 {
+        font-size: 32px;
+    }
+
+    .about p {
+        font-size: 18px;
     }
 
     .image-container {
-        margin: 0; /* Remove unnecessary margin */
-    }
-
-    .image {
-        max-width: 100%; /* Adjust image width to fit smaller screens */
+        margin-left: 300px;
+        width: 250px;
+        height: 400px;
     }
 }
 
-@media (max-width: 1024px) {
-    .hero {
-        padding: 50px 5%; /* Adjust padding for tablets */
+@media screen and (max-width: 992px) {
+    .logo {
+        font-size: 35px;
+        margin-left: 30px;
+        margin-right: 10px;
     }
 
     .content {
-        flex-direction: column; /* Stack content vertically on tablets */
-        align-items: center; /* Center align content */
+        margin-left: 30px;
+        padding: 20px;
     }
 
-    .about {
-        margin-right: 0;
-        margin-bottom: 30px; /* Adjust spacing between sections */
-        text-align: center; /* Center align text */
+    .about h1 {
+        font-size: 30px;
+    }
+
+    .about p {
+        font-size: 18px;
     }
 
     .image-container {
-        margin: 0; /* Remove unnecessary margin */
+        margin-left: 250px;
+        width: 200px;
+        height: 350px;
     }
 
-    .image {
-        max-width: 100%; /* Adjust image width to fit tablets */
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    form {
+        width: 90%;
     }
 }
-/* Media Query for Small screens */
-@media (max-width: 480px) {
-    .hero {
-        padding: 30px 3%;
-    }
 
+@media screen and (max-width: 768px) {
     .logo {
         font-size: 30px;
+        margin-left: 20px;
+    }
+
+    .content {
+        margin-left: 20px;
+        padding: 20px;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    .image-container {
+        margin-left: 200px;
+        width: 150px;
+        height: 300px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo {
+        font-size: 25px;
         margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
     }
 
     .content {
@@ -586,66 +609,82 @@ nav a:hover {
     }
 
     .about p {
-        font-size: 16px;
-    }
-
-    .project h2 {
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .project-item h3 {
-        font-size: 18px;
-    }
-
-    .project-item p {
         font-size: 14px;
+    }
+
+    .image-container {
+        margin-left: 150px;
+        width: 120px;
+        height: 250px;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    #contact {
-        padding: 10px;
     }
 
     form {
         width: 100%;
     }
+}
 
-    input, textarea {
-        width: 100%;
+@media screen and (max-width: 400px) {
+    .logo {
+        font-size: 20px;
+        margin-left: 5px;
     }
 
+    .content {
+        margin-left: 5px;
+        padding: 5px;
+    }
+
+    .about h1 {
+        font-size: 20px;
+    }
+
+    .about p {
+        font-size: 12px;
+    }
+
+    .image-container {
+        margin-left: 100px;
+        width: 100px;
+        height: 200px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+/* Responsive Navigation Menu */
+@media screen and (max-width: 768px) {
     nav ul {
-        display: flex; /* hide the nav menu by default */
+        display: flex; /* Show the nav menu */
+        flex-direction: column;
         position: absolute;
-        flex-direction: column-reverse;
-        top: 95px;
+        top: 60px;
         right: 0;
-        text-align: center;
+        width: 100%;
+        background-color: #333;
         transform: translateX(100%);
         transition: transform 0.3s ease;
     }
 
-    nav li {
-        margin: 0.5rem 0;
-    }
-
-    .menu-toggle:checked + nav ul {
+    nav ul.open {
         transform: translateX(0);
-        display: flex; /* shows the nav menu when button is clicked */
+    }
+
+    nav li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the menu toggle button */
     }
 }
-
-
-/* Ensures that the  dark mode toggle button is visible */
-#dark-mode-toggle-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
