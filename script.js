@@ -1,11 +1,8 @@
 function toggleMenu() {
-    var navList = document.getElementById('nav-list');
-    if (navList.classList.contains('open')) {
-        navList.classList.remove('open');
-    } else {
-        navList.classList.add('open');
-    }
+    const navList = document.getElementById('nav-list');
+    navList.classList.toggle('open');
 }
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
