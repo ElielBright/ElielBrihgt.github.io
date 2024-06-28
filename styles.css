@@ -492,234 +492,166 @@ nav a:hover {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 1200px) {
-    .logo {
-        font-size: 40px;
-        margin-left: 50px;
-        margin-right: 10px;
-    }
-
-    .content {
-        margin-left: 40px;
-        padding: 20px;
-    }
-
-    .about h1 {
-        font-size: 32px;
-    }
-
-    .about p {
-        font-size: 18px;
-    }
-
-    .image-container {
-        margin-left: 300px;
-        width: 250px;
-        height: 400px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .logo {
-        font-size: 35px;
-        margin-left: 30px;
-        margin-right: 10px;
-    }
-
-    .content {
-        margin-left: 30px;
-        padding: 20px;
-    }
-
-    .about h1 {
-        font-size: 30px;
-    }
-
-    .about p {
-        font-size: 18px;
-    }
-
-    .image-container {
-        margin-left: 250px;
-        width: 200px;
-        height: 350px;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 15px;
-    }
-
-    form {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .logo {
-        font-size: 30px;
-        margin-left: 20px;
-    }
-
-    .content {
-        margin-left: 20px;
-        padding: 20px;
-    }
-
-    .about h1 {
-        font-size: 28px;
-    }
-
-    .about p {
-        font-size: 16px;
-    }
-
-    .image-container {
-        margin-left: 200px;
-        width: 150px;
-        height: 300px;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 10px;
-    }
-
-    form {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .logo {
-        font-size: 25px;
-        margin-left: 10px;
-    }
-
-    .content {
-        margin-left: 10px;
-        padding: 10px;
-    }
-
-    .about h1 {
-        font-size: 24px;
-    }
-
-    .about p {
-        font-size: 14px;
-    }
-
-    .image-container {
-        margin-left: 150px;
-        width: 120px;
-        height: 250px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    form {
-        width: 100%;
-    }
-}
-
-
-@media screen and (max-width: 400px) {
-    .logo {
-        font-size: 20px;
-        margin-left: 5px;
-    }
-
-    .content {
-        margin-left: 5px;
-        padding: 5px;
-    }
-
-    .about h1 {
-        font-size: 20px;
-    }
-
-    .about p {
-        font-size: 12px;
-    }
-
-    .image-container {
-        margin-left: 100px;
-        width: 100px;
-        height: 200px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    form {
-        width: 100%;
-    }
-}
-
-/* Responsive Navigation Menu */
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #f75daa;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background: #fff;
-    margin: 4px 0;
-    transition:  0.3s ease-in-out;
-}
-
-/* Responsive Navigation Menu */
-@media screen and (max-width: 768px) {
-    nav ul {
-        display: flex; /* Hide the nav menu */
+   /* Extra Small Devices (phones, <576px) */
+@media only screen and (max-width: 575.98px) {
+    .header {
         flex-direction: column;
-        position: absolute;
-        top: 110px;
-        right: 0;
+        align-items: flex-end;
+    }
+    
+    nav ul {
+        flex-direction: column;
         width: 100%;
-        background-color: #3333332a;
         transform: translateX(100%);
         transition: transform 0.3s ease;
-        z-index: 1;
+        position: absolute;
+        top: 200px;
+        right: 0;
+        background-color: #33333336;
     }
-
+    
     nav ul.open {
-        display: flex; /* Show the nav menu when open */
         transform: translateX(0);
     }
 
-    nav li {
-        margin: 1rem 0;
-        text-align: center;
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .menu-toggle span {
+        background: #edf0f2;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+        border-radius: 10px;
+    }
+}
+
+
+
+/* Small Devices (tablets, ≥576px) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    /* CSS rules */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+    }
+    
+    nav ul.open {
+        transform: translateX(0);
     }
 
     .menu-toggle {
-        display: flex; /* Show the menu toggle button */
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .menu-toggle span {
+        background: #edf0f2;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+        border-radius: 10px;
     }
 }
+
+
+/* Medium Devices (desktops, ≥768px) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    /* CSS rules */
+    .header {
+        flex-direction: row;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        position: static;
+        transform: none;
+        transition: none;
+        background-color: transparent;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+/* Large Devices (large desktops, ≥992px) */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    /* CSS rules */
+    .header {
+        flex-direction: row;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        position: static;
+        transform: none;
+        transition: none;
+        background-color: transparent;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+/* Extra Large Devices (larger desktops, ≥1200px) */
+@media only screen and (min-width: 1200px) {
+    /* CSS rules */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    /* Navigation List */
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    nav li {
+        margin-left: 20px;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Fira Sans', sans-serif;
+    }
+    
+    /* Menu Toggle (hidden by default) */
+    .menu-toggle {
+        display: none;
+    }
+
+}
+
+
+
+
