@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>My Portfolio </title>
     <link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Fira+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -14,6 +14,19 @@
             background-color: #3333331d;
             color: #fff;
              font-size: 1rem; /* Base font size */
+}
+    html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+    /* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }
 
 
@@ -34,6 +47,162 @@
     @media only screen and (max-width: 575.98px) {
     footer {
         padding: 10px 10px; /* Adjust padding for smaller screens */
+    }
+}
+    nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* Menu Toggle (hidden by default) */
+.menu-toggle {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-content {
+    max-width: 100%;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 575.98px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+    }
+    
+    nav ul.open {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .menu-toggle span {
+        background: #edf0f2;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+        border-radius: 10px;
+    }
+    
+    footer {
+        padding: 10px 10px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+    }
+    
+    nav ul.open {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .menu-toggle span {
+        background: #edf0f2;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+        border-radius: 10px;
+    }
+    
+    footer {
+        padding: 10px 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    .header {
+        flex-direction: row;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        position: static;
+        transform: none;
+        transition: none;
+        background-color: transparent;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+    
+    footer {
+        padding: 15px 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        flex-direction: row;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        position: static;
+        transform: none;
+        transition: none;
+        background-color: transparent;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+    
+    footer {
+        padding: 20px 30px;
     }
 }
 </style>
