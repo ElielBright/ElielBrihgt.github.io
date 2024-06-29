@@ -76,7 +76,7 @@ h1, h2, h3 {
 
 .image-container {
     width: 300px;
-    height: 450px;
+    height: 350px;
     position: relative;
     margin: 50px auto;
     display: block;
@@ -223,8 +223,8 @@ form {
 
 label {
     margin: 0.5rem 0 0.2rem;
+    color: white;
 }
-
 input, textarea {
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -242,13 +242,19 @@ textarea {
 }
 
 button {
-    padding: 0.7rem;
+    padding: 1.1rem;
     background: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+}
+.submit-button {
+    margin-top: 20px; /* Adjust the value as needed */
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 20px;
 }
 
 button:hover {
